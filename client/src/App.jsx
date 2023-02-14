@@ -17,9 +17,6 @@ function App() {
   // DOM manipulation
 
   const form = document.getElementsByClassName("inputForm")[0];
-  console.log(form);
-
-  // const chatContainer = document.querySelector("#chat_container");
   const chatContainer = document.getElementsByClassName("chat_container")[0];
 
   let loadInterval;
@@ -100,7 +97,7 @@ function App() {
     loader(messageDiv);
 
     //fetch data from server -- get bot's response
-    const response = await fetch("http://localhost:5005", {
+    const response = await fetch("https://chatgenie.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
